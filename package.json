@@ -10,7 +10,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "element-ui": "^2.15.14",
-    "page-element2": "^0.1.23",
+    "page-element2": "^0.1.25",
     "vue": "^2.6.14"
   },
   "devDependencies": {
