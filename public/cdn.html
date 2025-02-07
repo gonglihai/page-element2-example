@@ -14,10 +14,23 @@
 
   <!-- 引入 Page.vue -->
   <script src="https://unpkg.com/page-element2"></script>
+  
+  <style>
+    html, body, #app {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    #app {
+      box-sizing: border-box;
+      padding: 16px;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app" style="padding: 16px;">
+  <div id="app">
     <v-page :page="pageOption"></v-page>
   </div>
   <script>
