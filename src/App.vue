@@ -1,10 +1,16 @@
 <template>
   <div id="app">
     <div class="app-menu">
-      <router-link v-for="route in routes" :to="route.path" :key="route.path">{{ route.name }}</router-link>
+      <router-link v-for="route in routes" :to="route.path" :key="route.path" :class="{
+        'active': $route.path === route.path,
+      }">
+        {{ route.name }}
+      </router-link>
     </div>
     <div class="app-content">
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -48,11 +54,15 @@ export default {
   text-decoration: none;
   color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 3px;
   transition: all .3s;
 }
 
-.app-menu a:hover{
+.app-menu a:hover {
+  background: #37373d;
+}
+
+.app-menu a.active {
   background: #409eff;
 }
 
