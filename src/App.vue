@@ -1,89 +1,69 @@
 <template>
   <div id="app">
-    <VPage :page="pageOption"></VPage>
+    <div class="app-menu">
+      <router-link v-for="route in routes" :to="route.path" :key="route.path">{{ route.name }}</router-link>
+    </div>
+    <div class="app-content">
+      <router-view />
+    </div>
   </div>
 </template>
-
 <script>
+import { routes } from './router'
 export default {
+  name: 'App',
   data() {
     return {
-      pageOption: {
-        tree: {
-          field: 'deptId',
-          api: 'https://page-element2.glh.red/mook/tree.json',
-        },
-        search: [
-          { label: '账号', field: 'id' },
-          { label: '姓名', field: 'name' },
-          {
-            label: '性别', field: 'gender', type: 'select', option: [
-              { id: '0', name: '男' },
-              { id: '1', name: '女' },
-              { id: '2', name: '未知' }
-            ]
-          }
-        ],
-        button: [
-          { name: '添加', click: () => console.log('点击了添加') },
-          { name: '编辑', selectCount: 1, click: this.edit },
-          { name: '删除', selectMin: 1, click: this.del },
-        ],
-        table: {
-          select: true,
-          api: 'https://page-element2.glh.red/mook/table.json',
-          col: [
-            { field: 'id', name: '账号' },
-            { field: "name", name: "姓名" },
-            { field: "gender", name: "性别" },
-            { field: "birthday", name: "生日" },
-            { field: "age", name: "年龄" },
-            {
-              name: '联系方式', children: [
-                { field: "email", name: "电子邮件" },
-                { field: "phone", name: "电话号码" },
-              ]
-            },
-            { field: "city", name: "城市" },
-            { field: "address", name: "地址" },
-            { field: "occupation", name: "职业" },
-            { field: "company", name: "公司" },
-            { field: "hobbies", name: "爱好", fmt: (value) => value.join(',') },
-            {
-              name: '操作', type: "button", button: [
-                { name: '详情' },
-                { name: '编辑', click: ({ row }) => this.edit([row]) },
-                { name: '删除', confirmClick: ({ row }) => this.del([row]) },
-              ]
-            }
-          ]
-        }
-      }
+      routes
     }
   },
   methods: {
-    edit(rows) {
-      console.log('点击了编辑，选中的行：', rows)
-    },
-    del(rows) {
-      console.log('点击了删除，选中的行：', rows)
-    },
   }
 }
 </script>
 
 <style>
-html,
-body,
-#app {
-  height: 100%;
-  width: 100%;
+* {
   padding: 0;
   margin: 0;
 }
 
 #app {
-  box-sizing: border-box;
-  padding: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-menu {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  padding: 10px;
+  background: #181818;
+}
+
+.app-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all .3s;
+}
+
+.app-menu a:hover{
+  background: #409eff;
+}
+
+.app-content {
+  flex: auto;
+  padding: 10px;
+  overflow: auto;
+}
+
+.app-content>div {
+  height: 100%;
+  width: 100%;
 }
 </style>

@@ -6,10 +6,17 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 import VPage from 'page-element2';
-Vue.use(VPage);
+import router from './router'
+
+import VPageConfig from './VPageConfig';
+
+Vue.use(VPage, {
+  config: VPageConfig
+});
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
