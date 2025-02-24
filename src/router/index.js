@@ -45,12 +45,12 @@ export const routes = [
       {
         path: 'InDialog',
         name: '在弹出框内',
-        component: () => import('../views/InDialog.vue')
+        component: () => import('../views/advanced/InDialog.vue')
       },
       {
         path: 'VSelect',
         name: '数据选择',
-        component: () => import('../views/VSelect.vue')
+        component: () => import('../views/advanced/VSelect.vue')
       }
     ]
   },

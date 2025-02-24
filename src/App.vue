@@ -2,7 +2,7 @@
   <div id="app">
     <div class="app-menu">
       <template v-for="l1 in routes">
-        <div class="l2" v-if="l1.children" :key="l1.path">
+        <div class="menu-l2" v-if="l1.children" :key="l1.path">
           <div>{{ l1.name }}</div>
 
           <!-- 二级菜单 -->
@@ -27,6 +27,10 @@
         <router-view />
       </keep-alive>
     </div>
+
+    <a class="view-on-github" v-if="$route.path != '/'" :href="githubViewsUrl + $route.path + '.vue'" target="_blank">
+      在 Github 上查看 {{ $route.path }}.vue
+    </a>
   </div>
 </template>
 <script>
@@ -35,11 +39,12 @@ export default {
   name: 'App',
   data() {
     return {
+      viewOnGithubShow: false,
+
+      githubViewsUrl: 'https://github.com/gonglihai/page-element2-example/tree/main/src/views',
       routes
     }
   },
-  methods: {
-  }
 }
 </script>
 
@@ -92,17 +97,29 @@ export default {
   width: 100%;
 }
 
-.l2 {
+.menu-l2 {
   width: 100%;
   color: gray;
 }
 
-.l2>div {
+.menu-l2>div {
   margin: 10px;
   font-size: 14px;
 }
 
-.l2>a {
+.menu-l2>a {
   display: block;
+}
+
+.view-on-github {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  background: #409eff;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px 5px 0px 0px;
 }
 </style>
