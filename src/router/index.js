@@ -1,9 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import BlankRouter from './BlankRouter.vue'
+
 Vue.use(VueRouter)
 
 export const routes = [
+  {
+    path: '/',
+    name: '首页',
+    component: () => import('../views/VIndex.vue')
+  },
   {
     path: '/OnlyTable',
     name: '只有表格',
@@ -19,11 +26,7 @@ export const routes = [
     name: '树、查询、按钮、表格',
     component: () => import('../views/AllTable.vue')
   },
-  {
-    path: '/DialogTable',
-    name: '弹出框',
-    component: () => import('../views/DialogTable.vue')
-  },
+
   {
     path: '/SearchTypes',
     name: '查询条件类型',
@@ -33,11 +36,27 @@ export const routes = [
     path: '/ToolButton',
     name: '工具栏按钮',
     component: () => import('../views/ToolButton.vue')
-  }
+  },
+  {
+    path: '/advanced',
+    name: '进阶用法',
+    component: BlankRouter,
+    children: [
+      {
+        path: 'InDialog',
+        name: '在弹出框内',
+        component: () => import('../views/InDialog.vue')
+      },
+      {
+        path: 'VSelect',
+        name: '数据选择',
+        component: () => import('../views/VSelect.vue')
+      }
+    ]
+  },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

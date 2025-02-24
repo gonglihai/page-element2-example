@@ -1,7 +1,7 @@
 <template>
   <div>
-    <el-button @click="visible = true">打开表格</el-button>
-    <el-dialog top="4vh" width="90vw" :visible.sync="visible" title="弹窗表格">
+    <el-button @click="visible = true">打开弹框</el-button>
+    <el-dialog top="4vh" width="90vw" :visible.sync="visible" title="在弹窗内">
       <!-- 
         4vh 是 el-dialog 的 top, 164px 是 el-dialog__header 的 height 54px, el-dialog__body 的 padding-top,bottom 30px 和 el-dialog 的 margin-bottom 50px
         如果 top 为 50px, 可以设置为 height: calc(100vh - 214px)
