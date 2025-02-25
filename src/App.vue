@@ -54,8 +54,8 @@ export default {
 
 .app-content {
   flex: auto;
-  padding: 10px;
-  overflow: auto;
+  margin: 10px;
+  overflow: hidden;
 }
 
 .app-content>div {

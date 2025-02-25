@@ -12,6 +12,11 @@ export const routes = [
     component: () => import('../views/VIndex.vue')
   },
   {
+    path: '/CDNIFrame',
+    name: 'CDN 方式安装',
+    component: () => import('../views/CDNIFrame.vue')
+  },
+  {
     path: '/OnlyTable',
     name: '只有表格',
     component: () => import('../views/OnlyTable.vue')
@@ -26,7 +31,6 @@ export const routes = [
     name: '树、查询、按钮、表格',
     component: () => import('../views/AllTable.vue')
   },
-
   {
     path: '/SearchTypes',
     name: '查询条件类型',
