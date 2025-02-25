@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import BlankRouter from './BlankRouter.vue'
+import BlankRouter from '../components/BlankRouter.vue'
 
 Vue.use(VueRouter)
 

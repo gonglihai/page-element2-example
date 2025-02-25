@@ -13,14 +13,3 @@ npm install
 ```
 npm run serve
 ```
-
-### 构建生产资源 Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
