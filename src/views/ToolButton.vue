@@ -5,7 +5,7 @@
         <div>按钮之前 button-start</div>
       </template>
       <template v-slot:button-end>
-        <div>按钮之后 button-end</div>
+        <div style="margin-left: 5px">按钮之后 button-end</div>
       </template>
     </VPage>
   </div>
