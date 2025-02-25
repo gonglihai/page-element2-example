@@ -4,14 +4,19 @@
     <!-- 菜单 -->
     <RouterMenu></RouterMenu>
 
-    <div class="app-content">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
-    </div>
+    <div class="app-right">
 
-    <!-- 底部在 Github 上查看 -->
-    <ViewOnGithub></ViewOnGithub>
+      <div class="app-content">
+        <keep-alive>
+          <router-view />
+        </keep-alive>
+      </div>
+
+      <!-- 在 Github 上查看 -->
+      <div  v-show="$route.path != '/'" style="flex: none; padding: 10px; background: #EBEEF5">
+        <ViewOnGithub></ViewOnGithub>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -40,6 +45,12 @@ export default {
   height: 100vh;
 }
 
+.app-right {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  overflow: hidden;
+}
 
 .app-content {
   flex: auto;
@@ -51,6 +62,4 @@ export default {
   height: 100%;
   width: 100%;
 }
-
-
 </style>

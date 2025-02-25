@@ -20,7 +20,6 @@
         {{ l1.name }}
       </router-link>
     </template>
-
   </div>
 </template>
 <script>
@@ -59,6 +58,10 @@ export default {
 
 .app-menu a.active {
   background: #409eff;
+}
+
+.app-menu a.active:hover {
+  background: #66b1ff;
 }
 
 .menu-l2 {

@@ -1,8 +1,8 @@
 <!-- 在 Github 上查看 源码 -->
 <template>
-  <a class="view-on-github" v-show="$route.path != '/'" :href="githubViewsUrl + $route.path + '.vue'" target="_blank">
+  <el-link class="view-on-github" :href="githubViewsUrl + $route.path + '.vue'" target="_blank">
     在 Github 上查看 {{ $route.path }}.vue
-  </a>
+  </el-link>
 </template>
 <script>
 export default {
@@ -16,14 +16,7 @@ export default {
 </script>
 <style scoped>
 .view-on-github {
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  background: #409eff;
-  color: #fff;
   font-size: 12px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px 5px 0px 0px;
 }
 </style>
