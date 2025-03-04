@@ -35,7 +35,7 @@ export default {
             { field: "age", name: "年龄" },
             {
               name: '联系方式', children: [
-                { field: "email", name: "电子邮件" },
+                { field: "email", name: "电子邮件", width: 170 },
                 { field: "phone", name: "电话号码" },
               ]
             },

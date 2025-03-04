@@ -11,6 +11,7 @@ export default {
         tree: {
           field: 'deptId',
           api: 'https://page-element2.glh.red/mook/tree.json',
+          expand: true
         },
         search: [
           { label: '账号', field: 'id' },
