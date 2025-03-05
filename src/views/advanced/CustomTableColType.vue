@@ -3,10 +3,11 @@
     <VPage :page="pageOption">
       <template #table-page-start>
         <div style="flex: auto; font-size: 14px; display: flex; align-items: center;">
-          头像图片来源于
-          <el-link href="https://github.com/Codennnn/vue-color-avatar" style="margin-left: 4px;" target="_blank">
+          头像由
+          <el-link href="https://github.com/Codennnn/vue-color-avatar" style="margin:0 4px;" target="_blank">
             Vue Color Avatar
           </el-link>
+          生成
         </div>
       </template>
     </VPage>
