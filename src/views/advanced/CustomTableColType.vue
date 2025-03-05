@@ -1,6 +1,15 @@
 <template>
   <div>
-    <VPage :page="pageOption"></VPage>
+    <VPage :page="pageOption">
+      <template #table-page-start>
+        <div style="flex: auto; font-size: 14px; display: flex; align-items: center;">
+          头像图片来源于
+          <el-link href="https://github.com/Codennnn/vue-color-avatar" style="margin-left: 4px;" target="_blank">
+            Vue Color Avatar
+          </el-link>
+        </div>
+      </template>
+    </VPage>
   </div>
 </template>
 <script>
@@ -8,34 +17,20 @@ export default {
   data() {
     return {
       pageOption: {
-        search: [
-          { label: '账号', field: 'id' },
-          { label: '姓名', field: 'name' },
-          {
-            label: '性别', field: 'gender', type: 'select', option: [
-              { id: '0', name: '男' },
-              { id: '1', name: '女' },
-              { id: '2', name: '未知' }
-            ]
-          }
-        ],
-        button: [
-          { name: '添加', click: () => console.log('点击了添加') },
-          { name: '编辑', selectCount: 1, click: this.edit },
-          { name: '删除', selectMin: 1, click: this.del },
-        ],
         table: {
           select: true,
           api: '/mook/table.json',
           col: [
             { field: 'id', name: '账号' },
+            // 全局自定义列类型, ColTypeImg.vue
+            { field: 'avatar', name: '⚡头像⚡', type: 'img', width: '80px', align: 'center' },
             { field: "name", name: "姓名" },
             { field: "gender", name: "性别" },
-            { field: "birthday", name: "生日" },
-            { field: "age", name: "年龄" },
+            // 全局自定义列类型, ColTypeAge.vue
+            { field: "age", name: "🔥年龄🔥", type: 'age' },
             {
               name: '联系方式', children: [
-                { field: "email", name: "电子邮件", width: 170 },
+                { field: "email", name: "电子邮件" },
                 { field: "phone", name: "电话号码" },
               ]
             },

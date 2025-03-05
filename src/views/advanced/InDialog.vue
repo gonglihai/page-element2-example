@@ -22,7 +22,7 @@ export default {
       pageOption: {
         tree: {
           field: 'deptId',
-          api: 'https://page-element2.glh.red/mook/tree.json',
+          api: '/mook/tree.json',
         },
         search: [
           { label: '账号', field: 'id' },
@@ -42,7 +42,7 @@ export default {
         ],
         table: {
           select: true,
-          api: 'https://page-element2.glh.red/mook/table.json',
+          api: '/mook/table.json',
           col: [
             { field: 'id', name: '账号' },
             { field: "name", name: "姓名" },
@@ -78,7 +78,7 @@ export default {
     },
     del(rows) {
       console.log('点击了删除，选中的行：', rows)
-    },
+    }
   }
 }
 </script>

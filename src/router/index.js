@@ -55,6 +55,11 @@ export const routes = [
         path: 'VSelect',
         name: '数据选择',
         component: () => import('../views/advanced/VSelect.vue')
+      },
+      {
+        path: 'CustomTableColType',
+        name: '自定义表格列类型',
+        component: () => import('../views/advanced/CustomTableColType')
       }
     ]
   },

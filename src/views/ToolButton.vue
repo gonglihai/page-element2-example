@@ -25,7 +25,7 @@ export default {
         ],
         table: {
           select: true,
-          api: 'https://page-element2.glh.red/mook/table.json',
+          api: '/mook/table.json',
           col: [
             { field: 'id', name: '账号' },
             { field: "name", name: "姓名" },

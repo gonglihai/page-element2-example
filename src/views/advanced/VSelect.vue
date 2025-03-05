@@ -26,7 +26,7 @@ export default {
       pageOption: {
         tree: {
           field: 'deptId',
-          api: 'https://page-element2.glh.red/mook/tree.json',
+          api: '/mook/tree.json',
         },
         search: [
           { label: '账号', field: 'id' },
@@ -62,7 +62,7 @@ export default {
         ],
         table: {
           select: true,
-          api: 'https://page-element2.glh.red/mook/table.json',
+          api: '/mook/table.json',
           col: [
             { field: 'id', name: 'id' },
             { field: "name", name: "姓名" },

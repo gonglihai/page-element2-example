@@ -1,3 +1,9 @@
+
+// 引入自定义列类型
+const ColTypeAge = () => import('./components/colType/ColTypeAge.vue');
+const ColTypeImg = () => import('./components/colType/ColTypeImg.vue');
+
+
 // page.vue 全局配置
 // 见 https://page-element2.glh.red/doc/%E8%B5%B7%E6%AD%A5/%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE.html
 export default {
@@ -9,6 +15,12 @@ export default {
     props: {
       value: 'name',
       label: 'id'
+    }
+  },
+  table: {
+    colType: {
+      age: ColTypeAge, // 配置自定义列类型 type: 'age'
+      img: ColTypeImg,
     }
   }
 }
