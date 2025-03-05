@@ -6,10 +6,7 @@ export default {
   },
   tree: {
     width: '200px',
-    props: {
-      value: 'name',
-      label: 'id'
-    }
+    
   },
   table: {
     colType: {

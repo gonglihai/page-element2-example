@@ -60,6 +60,11 @@ export const routes = [
         path: 'CustomTableColType',
         name: '自定义表格列类型',
         component: () => import('../views/advanced/CustomTableColType')
+      },
+      {
+        path: 'TreeCustom',
+        name: '左侧树自定义',
+        component: () => import('../views/advanced/TreeCustom')
       }
     ]
   },
