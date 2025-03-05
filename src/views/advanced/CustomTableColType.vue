@@ -22,11 +22,14 @@ export default {
           api: '/mook/table.json',
           col: [
             { field: 'id', name: '账号' },
-            // 全局自定义列类型, ColTypeImg.vue
+            // 自定义列类型
+            // 组件定义在 src/components/colType/ 目录下
+            // 组件注册在 src/VPageConfig.js 文件内
+            // src/components/colType/ColTypeImg.vue
             { field: 'avatar', name: '⚡头像⚡', type: 'img', width: '80px', align: 'center' },
             { field: "name", name: "姓名" },
             { field: "gender", name: "性别" },
-            // 全局自定义列类型, ColTypeAge.vue
+            // src/components/colType/ColTypeAge.vue
             { field: "age", name: "🔥年龄🔥", type: 'age' },
             {
               name: '联系方式', children: [
