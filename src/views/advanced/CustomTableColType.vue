@@ -19,10 +19,10 @@ export default {
     return {
       pageOption: {
         table: {
-          select: true,
+          pageSizes: [5, 10, 20],
           api: '/mook/table.json',
           col: [
-            { field: 'id', name: '账号' },
+            { field: 'id', name: '账号', sortable: true },
             // 自定义列类型
             // 组件定义在 src/components/colType/ 目录下
             // 组件注册在 src/VPageConfig.js 文件内

@@ -6,5 +6,8 @@ module.exports = defineConfig({
       title: 'Page.vue 使用示例',
       entry: 'src/main.js'
     }
+  },
+  devServer: {
+    port: 8081
   }
 })

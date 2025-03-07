@@ -9,7 +9,7 @@ export default {
     return {
       pageOption: {
         table: {
-          select: true,
+          pageSizes: [100, 200, 300, 400, 500],
           api: '/mook/table.json',
           col: [
             { field: 'id', name: '账号' },
@@ -17,12 +17,8 @@ export default {
             { field: "gender", name: "性别" },
             { field: "birthday", name: "生日" },
             { field: "age", name: "年龄" },
-            {
-              name: '联系方式', children: [
-                { field: "email", name: "电子邮件" },
-                { field: "phone", name: "电话号码" },
-              ]
-            },
+            { field: "email", name: "电子邮件" },
+            { field: "phone", name: "电话号码" },
             { field: "city", name: "城市" },
             { field: "address", name: "地址" },
             { field: "occupation", name: "职业" },

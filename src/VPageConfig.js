@@ -6,9 +6,10 @@ export default {
   },
   tree: {
     width: '200px',
-    
+    expandLevel: 1
   },
   table: {
+
     colType: {
       age: () => import('./components/colType/ColTypeAge.vue'), // 添加列类型, 动态年龄, type: 'age'
       img: () => import('./components/colType/ColTypeImg.vue'), // 添加列类型, 图片, type: 'img'

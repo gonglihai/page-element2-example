@@ -42,8 +42,7 @@ export default {
         tree: {
           field: 'deptId',
           api: '/mook/tree.json',
-          expand: true,
-          width: '300px'
+          width: '300px',
         },
         table: {
           select: true,

@@ -12,18 +12,10 @@ import { TableColMixin } from 'page-element2';
 
 export default {
   mixins: [TableColMixin],
-  created() {
-    this.calculateAge();
-  },
-  data() {
-    return {
-      age: ''
-    }
-  },
-  methods: {
-    calculateAge() {
+  computed: {
+    age() {
       if (!this.scope.row.birthday) {
-        this.age = '-';
+        return '-';
       }
       const birthDate = new Date(this.scope.row.birthday); // 将字符串转换为 Date 对象
       const today = new Date(); // 获取当前日期
@@ -38,8 +30,8 @@ export default {
         age--;
       }
 
-      this.age = age;
+      return age;
     }
-  }
+  },
 }
 </script>
