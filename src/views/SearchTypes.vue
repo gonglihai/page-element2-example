@@ -16,36 +16,40 @@ export default {
     return {
       pageOption: {
         tree: {
+          fold: true,
           field: 'deptId',
           api: '/mook/tree.json',
         },
         // search 定义查询条件数组
-        search: [
-          { field: 'input1', label: '输入框', placeholder: '自定义 placeholder', clearable: false, default: '123' },                        // input 输入框
-          {
-            field: 'select1', label: '下拉框', type: 'select',         // select 下拉框
-            option: [         // 静态选项
-              { id: '1', name: '选项1' },
-              { id: '2', name: '选项2' },
-            ],
-          },
-          {
-            field: 'select2', label: '下拉框2', type: 'select',         // select 下拉框 (自定义 props)
-            option: [
-              { dictValue: 1, dictName: '普通员工' },
-              { dictValue: 2, dictName: '部门主管' },
-              { dictValue: 3, dictName: '市场经理' },
-            ], props: {
-              value: 'dictValue',
-              label: 'dictName'
-            }, multiple: true, multipleValueType: 'string'
-          },
-          { field: 'date', type: 'date', label: '日期', valueFormat: "MM-dd", format: 'yy-MM-dd' },              // date 日期
-          { field: 'dateRange', label: '日期范围', type: 'date-range', valueFormat: "MM-dd", format: 'yyyy-MM-dd' },// date-range 日期范围
-          { field: 'year', label: '年', type: 'year' },                // year 年
-          { field: 'yearMonth', label: '年月', type: 'year-month' },   // year-month 年月
-          { field: 'yearMonth2', label: '年月(yyyy-MM)', type: 'year-month', valueFormat: 'yyyy-MM' },   // year-month 年月
-        ],
+        search: {
+          fold: false,
+          item: [
+            { field: 'input1', label: '输入框', placeholder: '自定义 placeholder', clearable: false, default: '123' },                        // input 输入框
+            {
+              field: 'select1', label: '下拉框', type: 'select',         // select 下拉框
+              option: [         // 静态选项
+                { id: '1', name: '选项1' },
+                { id: '2', name: '选项2' },
+              ],
+            },
+            {
+              field: 'select2', label: '下拉框2', type: 'select',         // select 下拉框 (自定义 props)
+              option: [
+                { dictValue: 1, dictName: '普通员工' },
+                { dictValue: 2, dictName: '部门主管' },
+                { dictValue: 3, dictName: '市场经理' },
+              ], props: {
+                value: 'dictValue',
+                label: 'dictName'
+              }, multiple: true, multipleValueType: 'string'
+            },
+            { field: 'date', type: 'date', label: '日期', valueFormat: "MM-dd", format: 'yy-MM-dd' },              // date 日期
+            { field: 'dateRange', label: '日期范围', type: 'date-range', valueFormat: "MM-dd", format: 'yyyy-MM-dd' },// date-range 日期范围
+            { field: 'year', label: '年', type: 'year' },                // year 年
+            { field: 'yearMonth', label: '年月', type: 'year-month' },   // year-month 年月
+            { field: 'yearMonth2', label: '年月(yyyy-MM)', type: 'year-month', valueFormat: 'yyyy-MM' },   // year-month 年月
+          ],
+        },
         button: [
           { name: '添加', click: () => console.log('点击了添加') },
           { name: '编辑', selectCount: 1, click: this.edit },
