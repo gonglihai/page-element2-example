@@ -16,7 +16,7 @@
     │  └─colType       // 自定义列类型组件
     ├─router           // 路由/菜单
     ├─views            // 使用示例
-    ├─main.js          // 入口, 包含 Page.vue 的注册
+    ├─main.js          // 入口, 包含 Page.vue 的安装/配置
     └─VPageConfig.js   // Page.vue 全局配置
 
 ```
