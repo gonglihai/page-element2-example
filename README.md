@@ -18,7 +18,6 @@
     ├─views            // 使用示例
     ├─main.js          // 入口, 包含 Page.vue 的安装/配置
     └─VPageConfig.js   // Page.vue 全局配置
-
 ```
 
 
