@@ -1,10 +1,15 @@
+<!-- 示例: 进阶用法/数据选择 -->
 <template>
   <div>
     <el-button @click="visible = true">选择人员</el-button>
+    
     <div>已选择人员id ({{ value.length }}人): {{ value }}</div>
+
     <el-dialog top="4vh" width="90vw" :visible.sync="visible" title="选择人员">
       <div style="height: calc(100vh - 4vh - 164px)">
         <VPage :page="pageOption">
+
+          <!-- 插槽: 在操作按钮之后 -->
           <template v-slot:button-end>
             <div style="margin-left: 10px;">已选择 {{ value.length }} 人</div>
           </template>

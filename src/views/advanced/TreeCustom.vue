@@ -1,7 +1,9 @@
-<template>
+<!-- 示例: 进阶用法/左侧树自定义 -->
+ <template>
   <div>
     <VPage ref="page" :page="pageOption">
-      <!-- 树搜索之后 编辑按钮 -->
+
+      <!-- 插槽: 树搜索之后 编辑按钮 -->
       <template #tree-search-end>
         <div style="display: flex; flex:none; align-items: center; margin-left: 4px">
           <el-button-group>
@@ -15,7 +17,7 @@
         </div>
       </template>
 
-      <!-- 树节点作用域插槽 -->
+      <!-- 插槽: 树节点作用域插槽 -->
       <template v-slot:tree-node="{ node, data }">
         <span class="custom-tree-node1">
           <span>{{ node.label }}</span>
@@ -29,6 +31,7 @@
           </span>
         </span>
       </template>
+      
     </VPage>
   </div>
 </template>
@@ -93,6 +96,7 @@ export default {
 </script>
 
 <style scoped>
+/* 树节点样式 */
 .custom-tree-node1 {
   flex: 1;
   display: flex;
@@ -102,6 +106,7 @@ export default {
   padding-right: 8px;
 }
 
+/* 树节点选中后按钮颜色修改为白色 */
 .el-tree-node.is-current>.el-tree-node__content .custom-tree-node1 .el-button {
   color: white
 }

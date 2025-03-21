@@ -1,9 +1,11 @@
+<!-- 示例: CDN 方式安装 -->
 <template>
   <div class="cdn-iframe">
     <div style="display: flex;">
       <span style="margin-right: 5px">在 iframe 内使用,</span>
       <el-link size="mini" @click="open" type="primary">新标签页打开<i class="el-icon-link el-icon--right"></i></el-link>
     </div>
+    <!-- 文件在 public 目录下 -->
     <iframe src="/cdn.html"></iframe>
   </div>
 </template>

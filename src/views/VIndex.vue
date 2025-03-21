@@ -1,3 +1,4 @@
+<!-- 首页 -->
 <template>
   <div class="v-index">
     <h1>Page-element2 使用示例</h1>

@@ -1,9 +1,14 @@
+<!-- 示例: 工具栏按钮 -->
 <template>
   <div>
     <VPage :page="pageOption" @buttonDelete="del">
+
+      <!-- 插槽: 按钮之前 -->
       <template v-slot:button-start>
         <div>按钮之前 button-start</div>
       </template>
+
+      <!-- 插槽: 按钮之后 -->
       <template v-slot:button-end>
         <div style="margin-left: 5px">按钮之后 button-end</div>
       </template>

@@ -1,3 +1,4 @@
+<!-- 示例: 树、查询、按钮、表格 -->
 <template>
   <div>
     <VPage :page="pageOption"></VPage>

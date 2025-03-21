@@ -1,6 +1,9 @@
+<!-- 示例: 进阶用法/自定义表格列类型 -->
 <template>
   <div>
     <VPage :page="pageOption">
+
+      <!-- 插槽: 表格分页之前, 头像版权说明 -->
       <template #table-page-start>
         <div style="flex: auto; font-size: 14px; display: flex; align-items: center;">
           头像由

@@ -1,3 +1,4 @@
+<!-- 示例: 只有表格 -->
 <template>
   <div>
     <VPage :page="pageOption"></VPage>

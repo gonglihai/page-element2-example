@@ -1,9 +1,14 @@
+<!-- 示例: 查询条件类型 -->
 <template>
   <div>
     <VPage ref="page" :page="pageOption" @search="search">
+
+      <!-- 插槽: 搜索按钮之前 -->
       <template v-slot:search-button-start>
         <el-button size="mini">search-button-start</el-button>
       </template>
+
+      <!-- 插槽: 搜索按钮之后 -->
       <template v-slot:search-button-end>
         <el-button size="mini">search-button-end</el-button>
       </template>
