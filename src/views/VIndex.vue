@@ -4,7 +4,7 @@
     <h1>Page-element2 使用示例</h1>
     <div style="margin-top: 40px;">
       <el-button type="primary" @click="open('https://page-element2.glh.red/')">使用文档</el-button>
-      <el-button @click="open('https://github.com/gonglihai/page-element2-example')">Github</el-button>
+      <el-button @click="open('https://github.com/gonglihai/page-element2')">Github</el-button>
     </div>
   </div>
 </template>
