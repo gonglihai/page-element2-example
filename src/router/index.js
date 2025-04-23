@@ -65,6 +65,11 @@ export const routes = [
         path: 'TreeCustom',
         name: '左侧树自定义',
         component: () => import('../views/advanced/TreeCustom')
+      },
+      {
+        path: 'SearchArea',
+        name: '查询条件级联(省市县)',
+        component: () => import('../views/advanced/SearchArea')
       }
     ]
   },
